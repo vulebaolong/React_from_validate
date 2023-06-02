@@ -87,13 +87,28 @@ export default class FormValidate extends Component {
                 errors: { ...this.state.errors, [name]: error },
             },
             () => {
-                console.log(this.state);
+                // console.log(this.state);
             }
         );
     };
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        const { values, errors } = this.state;
+        let isValid = true;
+        for (const key in values) {
+            if (values[key] === "" || errors[key] !== "") {
+                isValid = false;
+            }
+        }
+        if (!isValid) {
+            return console.log("không cho submit");
+        }
+        console.log("submit");
+    };
     render() {
         return (
-            <div className="row row-gap-5">
+            <form className="row row-gap-5" onSubmit={this.handleSubmit}>
                 <div className="col-6">
                     <div className="form-floating">
                         <input
@@ -183,7 +198,16 @@ export default class FormValidate extends Component {
                         </span>
                     </div>
                 </div>
-            </div>
+                <div className="col">
+                    <button
+                        type="submit"
+                        className="btn btn-success "
+                        style={{ width: "100%" }}
+                    >
+                        submit
+                    </button>
+                </div>
+            </form>
         );
     }
 }

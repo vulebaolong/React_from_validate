@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class FormValidate extends Component {
     render() {
         return (
-            <div className="row row-gap-5">
+            <form className="row row-gap-5">
                 <div className="col-6">
                     <div className="form-floating">
                         <input
@@ -72,7 +72,16 @@ export default class FormValidate extends Component {
                         <span className="text-danger fst-italic">*</span>
                     </div>
                 </div>
-            </div>
+                <div className="col">
+                    <button
+                        type="submit"
+                        className="btn btn-success "
+                        style={{ width: "100%" }}
+                    >
+                        submit
+                    </button>
+                </div>
+            </form>
         );
     }
 }

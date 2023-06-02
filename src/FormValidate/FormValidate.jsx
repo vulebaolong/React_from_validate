@@ -42,7 +42,7 @@ export default class FormValidate extends Component {
                 </div>
                 <div className="col-6">
                     <select name="type" className="form-select form-select-lg">
-                        <option defaultValue>Product Type</option>
+                        <option value={0}>Product Type</option>
                         <option value={1}>One</option>
                         <option value={2}>Two</option>
                         <option value={3}>Three</option>

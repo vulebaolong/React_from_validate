@@ -96,11 +96,13 @@ export default class FormValidate extends Component {
         e.preventDefault();
         const { values, errors } = this.state;
         let isValid = true;
+
         for (const key in values) {
             if (values[key] === "" || errors[key] !== "") {
                 isValid = false;
             }
         }
+
         if (!isValid) {
             return console.log("không cho submit");
         }

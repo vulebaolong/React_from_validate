@@ -118,6 +118,7 @@ export default class FormValidate extends Component {
                             className="form-control"
                             placeholder="id"
                             name="id"
+                            value={this.state.values.id}
                             onChange={this.handleChangeValue}
                         />
                         <label>id</label>
@@ -133,6 +134,7 @@ export default class FormValidate extends Component {
                             className="form-control"
                             placeholder="image"
                             name="image"
+                            value={this.state.values.image}
                             onChange={this.handleChangeValue}
                         />
                         <label>image</label>
@@ -148,6 +150,7 @@ export default class FormValidate extends Component {
                             className="form-control"
                             placeholder="Name"
                             name="name"
+                            value={this.state.values.name}
                             onChange={this.handleChangeValue}
                         />
                         <label>Name</label>
@@ -161,6 +164,7 @@ export default class FormValidate extends Component {
                         name="type"
                         className="form-select form-select-lg"
                         onChange={this.handleChangeValue}
+                        value={this.state.values.type}
                     >
                         <option value={0}>Product Type</option>
                         <option value={1}>One</option>
@@ -178,6 +182,7 @@ export default class FormValidate extends Component {
                             className="form-control"
                             placeholder="Price"
                             name="price"
+                            value={this.state.values.price}
                             onChange={this.handleChangeValue}
                         />
                         <label htmlFor="floatingInput">Price</label>
@@ -192,6 +197,7 @@ export default class FormValidate extends Component {
                             className="form-control"
                             placeholder="Description"
                             name="description"
+                            value={this.state.values.description}
                             onChange={this.handleChangeValue}
                         ></textarea>
                         <label htmlFor="floatingInput">Description</label>

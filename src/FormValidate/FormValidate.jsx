@@ -78,7 +78,7 @@ export default class FormValidate extends Component {
                         className="btn btn-success "
                         style={{ width: "100%" }}
                     >
-                        submit
+                        Submit
                     </button>
                 </div>
             </form>
